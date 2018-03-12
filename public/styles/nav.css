@@ -1,0 +1,39 @@
+
+#nav-bar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 0, 2em;
+  background-color: steelblue;
+  height: 80px;
+  color: #e8fdff;
+  
+}
+
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+}
+
+#nav-bar .header {
+  font-size: 2em;
+  vertical-align: top;
+  line-height: 2.5em; 
+}
+
+#nav-bar .toggle {
+  float: right;
+  border: 1px solid blue;
+  border-radius: 3px;
+  background-color: blanchedalmond;
+  color:steelblue;
+  font-weight: bold;
+  height: 60px;
+  margin-top: 8px;
+}
+
+#nav-bar:hover .toggle {
+  background-color: steelblue;
+  color: blanchedalmond;
+  /* color: blanchedalmond; */
+}

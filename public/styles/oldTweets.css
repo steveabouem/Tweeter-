@@ -60,7 +60,7 @@
     display: inline-block;
 }
 
-.postInfo:hover span {
+.oldTweets:hover .postInfo span {
     visibility: visible;
 }
 

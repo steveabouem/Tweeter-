@@ -17,8 +17,8 @@ Feel free to navigate through all folders in the repository. They have been orga
 
 ##Screenshots
 
-!["Screenshot of tweeter home page"](https://github.com/steveabouem/tweeter/blob/master/docs/home.png?raw=true)
+!["Screenshot of tweeter home page"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/home.png?raw=true)
 
-!["Screenshot of tweet composing"](https://github.com/steveabouem/tweeter/blob/master/docs/composing.png?raw=true)
+!["Screenshot of tweet composing"](https://github.com/steveabouem/tweeter/blob/Tweeter-resubmission/docs/composing.png?raw=true)
 
-!["Screenshot of tweet posting"](https://github.com/steveabouem/tweeter/blob/master/docs/posted.png?raw=true)
+!["Screenshot of tweet posting"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/posted.png?raw=true)

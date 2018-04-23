@@ -7,6 +7,9 @@ To build it, I have mostly used HTML, CSS, JS, jQuery and AJAX for the fron end.
 ## Directories
 Feel free to navigate through all folders in the repository. They have been organised by purpose: 'public' for the front end, and 'server' for the back end.
 
+## Getting started 
+Clone the repository, then open the folder *Tweeter-resubmission*. Run the *npm install* command to set up all the necessary dependencies then run the command *node server/index.js* to start the server. Navigate and test ad voluntatem.
+
 ## Dependencies
 - Body-parser
 - Chance
@@ -15,7 +18,7 @@ Feel free to navigate through all folders in the repository. They have been orga
 - MongoDb
 - Node 5.10.x or above
 
-##Screenshots
+## Screenshots
 
 !["Screenshot of tweeter home page"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/home.png?raw=true)
 

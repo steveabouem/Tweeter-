@@ -55,7 +55,7 @@ const data = [
 ];
 
 $(document).ready(function() {
-  loadTweets();
+  renderTweets(data);
   $(function() {
     $(".toggle").click(function() {
       $(".new-tweet").slideToggle();

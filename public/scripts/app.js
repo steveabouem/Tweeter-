@@ -55,8 +55,8 @@ const data = [
 ];
 
 $(document).ready(function() {
-  renderTweets(data); //Displays initial tweets
-  loadTweets();
+  renderTweets(data); //renders the tweets database
+  loadTweets(); //loads the tweets database
   $(function() {
     $(".toggle").click(function() {
       $(".new-tweet").slideToggle();
@@ -75,9 +75,9 @@ $(document).ready(function() {
     <h2>${obj.content.text}</h2> 
     <div class="postInfo"> created on ${obj.formatDate}.
     <span>
-    <img src="/images/flag.png">
-    <img src="/images/heart.png">
-    <img src="/images/retweet.png">
+    <img class="flag" src="/images/flag.png">
+    <img class="like" src="/images/heart.png">
+    <img class="retweet" src="/images/retweet.png">
     </span>
     </div>
     </section>`;
@@ -96,14 +96,17 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     validation(event);
+    textInput = "";
   }); //event listener
 
   function loadTweets() {
     $.get("/tweets", function(tweetRequest) {
       renderTweets(tweetRequest);
     });
+    $("textarea").val("");
   } //loadTweets function
 
+  // $(".sendTweet").
   function validation(event) {
     let charCount = "";
     let newTweet = $("textarea").serialize();

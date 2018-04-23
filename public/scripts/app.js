@@ -87,7 +87,7 @@ $(document).ready(function() {
       tweet.formatDate = moment(tweet.created_at).format("MMM Do YYYY");
       let single = createTweetElement(tweet);
       $(".oldTweets").prepend(single);
-      console.log(moment(91461113796368).fromNow());
+      // console.log(moment(91461113796368).fromNow());
     }
   } //renderTweets function
 

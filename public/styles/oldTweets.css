@@ -54,16 +54,24 @@
     padding-bottom: 10px;
 }
 
-.oldTweets .postInfo span{
+.oldTweets .postInfo span {
     float: right;
     visibility: hidden;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .oldTweets:hover .postInfo span {
     visibility: visible;
 }
 
+ .like:hover, .flag:hover, .retweet:hover {
+    background: rgb(83, 195, 167);
+}
+
+.like:active, .flag:active, .retweet:active{
+    background: 2px solid;
+    background-color: yellow;
+}
 .oldTweets .postInfo span img {
     width: 25px;
     height: 25px;

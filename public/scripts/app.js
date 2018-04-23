@@ -103,16 +103,15 @@ $(document).ready(function() {
     $.get("/tweets", function(tweetRequest) {
       renderTweets(tweetRequest);
     });
-    $("textarea").val("");
+    $("textarea").val(""); //resets textarea upon new tweet submission.
   } //loadTweets function
 
-  // $(".sendTweet").
   function validation(event) {
     let charCount = "";
     let newTweet = $("textarea").serialize();
     // console.log("newTweet", newTweet); //TEST
     if (newTweet.length == 5) {
-      //Starting at 5 to account for the characters "text="(see line 108)
+      //Starting at 5 to account for the characters "text="(see TEST line above)
       //preceding the actual content of the text area, and accurately stop at 140 chars
       alert("no input");
     } else if (newTweet.length > 145) {

@@ -55,7 +55,8 @@ const data = [
 ];
 
 $(document).ready(function() {
-  renderTweets(data);
+  renderTweets(data); //Displays initial tweets
+  loadTweets();
   $(function() {
     $(".toggle").click(function() {
       $(".new-tweet").slideToggle();
@@ -65,6 +66,7 @@ $(document).ready(function() {
   });
 
   function createTweetElement(obj) {
+    //
     let tweetAppend = `<article >
     <div class="userInfo">${obj.user.name}
     <img src= ${obj.user.avatars.regular}>
@@ -87,7 +89,7 @@ $(document).ready(function() {
       tweet.formatDate = moment(tweet.created_at).format("MMM Do YYYY");
       let single = createTweetElement(tweet);
       $(".oldTweets").prepend(single);
-      // console.log(moment(91461113796368).fromNow());
+      // console.log(moment(91461113796368).fromNow());TESTS
     }
   } //renderTweets function
 

@@ -3,6 +3,8 @@
 * jQuery is already loaded
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
+//LINE 81 creates an id for each newtweet like count. ensure text links to the likes key in data, and
+// updates on the screen as you click on IDBTransaction. I.E, add the correct event listener
 const data = [
   {
     user: {
@@ -17,7 +19,8 @@ const data = [
     content: {
       text: "Je pense , donc je suis"
     },
-    created_at: 1461113959088
+    created_at: 1461113959088,
+    likes: 0 // hardcoded initial likes count in order to use it in the litterals below.
   },
 
   {
@@ -34,7 +37,8 @@ const data = [
       text:
         "If I have seen further it is by standing on the shoulders of giants"
     },
-    created_at: 1461116232227
+    created_at: 1461116232227,
+    likes: 0
   },
 
   {
@@ -50,7 +54,8 @@ const data = [
     content: {
       text: "Es ist nichts schrecklicher als eine tätige Unwissenheit."
     },
-    created_at: 1461113796368
+    created_at: 1461113796368,
+    likes: 0
   }
 ];
 
@@ -66,14 +71,17 @@ $(document).ready(function() {
   });
 
   function createTweetElement(obj) {
-    //
+    //template for all new tweets below.
     let tweetAppend = `<article >
     <div class="userInfo">${obj.user.name}
     <img src= ${obj.user.avatars.regular}>
     <span>${obj.user.handle}</span>
     </div>
-    <h2>${obj.content.text}</h2> 
+    <h2>${obj.content.text}</h2>     
     <div class="postInfo"> created on ${obj.formatDate}.
+    <div class="${obj.user.name}" style="display:inline">${
+      obj.likes
+    } likes</div>
     <span>
     <img class="flag" src="/images/flag.png">
     <img class="like" src="/images/heart.png">
@@ -83,13 +91,13 @@ $(document).ready(function() {
     </section>`;
     return tweetAppend;
   } //createTweetElement function
+  res.redirect("/urls");
 
   function renderTweets(arr) {
     for (let tweet of arr) {
       tweet.formatDate = moment(tweet.created_at).format("MMM Do YYYY");
       let single = createTweetElement(tweet);
       $(".oldTweets").prepend(single);
-      // console.log(moment(91461113796368).fromNow());TESTS
     }
   } //renderTweets function
 
@@ -109,7 +117,6 @@ $(document).ready(function() {
   function validation(event) {
     let charCount = "";
     let newTweet = $("textarea").serialize();
-    // console.log("newTweet", newTweet); //TEST
     if (newTweet.length == 5) {
       //Starting at 5 to account for the characters "text="(see TEST line above)
       //preceding the actual content of the text area, and accurately stop at 140 chars

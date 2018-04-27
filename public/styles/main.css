@@ -8,7 +8,7 @@
 }
 
 .liked {
-  background-color: #e93232;
+  background-color: #9b9696;
   border-radius: 10px;
 }
 
@@ -140,6 +140,7 @@
 
 html {
   box-sizing: border-box;
+  font-family: 'Poiret One', cursive;
 }
 
 *, *:before, *:after {

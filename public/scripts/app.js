@@ -1,11 +1,10 @@
 $(document).ready(function() {
   loadTweets(); //loads the tweets database
-  $(function() {
-    $(".toggle").click(function() {
-      $(".new-tweet").slideToggle();
-      $("textarea").focus();
-      $("textarea").select();
-    });
+
+  $(".toggle").click(function() {
+    $(".new-tweet").slideToggle();
+    $("textarea").focus();
+    $("textarea").select();
   });
 
   function createTweetElement(obj) {
@@ -20,17 +19,25 @@ $(document).ready(function() {
     <div class="postInfo"> created on ${obj.formatDate}.
     <span>
     <img class="flag" src="/images/flag.png">
-    <img class="like" src="/images/heart.png"> 
-    <img class="retweet" src="/images/retweet.png">
+    <img class="${obj.user.name}" src="/images/heart.png"> ${obj.likes}
+    <img class="retweet" src="/images/retweet.png"> 
     </span>
     </div>
     </section>`;
 
+    $(".postInfo").on("click", "img", function(event) {
+      let imageClass = event.currentTarget.className;
+      imageClass = obj.user.name;
+      console.log("user: ", event);
+      obj.likes++;
+    });
+
     return tweetAppend;
   } //createTweetElement function
 
-  function renderTweets(arr) {
-    for (let tweet of arr) {
+  function renderTweets(jsonArray) {
+    for (let tweet of jsonArray) {
+      tweet.likes = 0;
       tweet.formatDate = moment(tweet.created_at).format("MMM Do YYYY");
       let single = createTweetElement(tweet);
       $(".oldTweets").prepend(single);

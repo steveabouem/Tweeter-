@@ -1,0 +1,193 @@
+.oldTweets {
+  align-items: center;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 2px;
+  border-radius: 10px;
+  background-color: #c8f2ff;
+}
+
+.oldTweets .userInfo {
+  text-align: justify;
+  background-color: #00a1b6;
+  font-weight: bold;
+  color: #d3e9ff;
+  display: inline-block;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px lightblue solid;
+  border-radius: 2px;
+  line-height: 3em;
+}
+
+.oldTweets .postInfo span img {
+  width: 25px;
+  height: 25px;
+}
+
+.oldTweets .userInfo:hover {
+  background-color: lightgray;
+  color: darkslategrey;
+}
+
+.oldTweets .userInfo span {
+  float: right;
+  font-weight: lighter;
+}
+
+.oldTweets .userInfo img {
+  float: left;
+  margin: 2px 5px;
+  height: 45px;
+}
+
+.oldTweets h2 {
+  text-align: left;
+  padding: 5px;
+  width: 80%;
+  margin: 15px auto;
+  font-weight: lighter;
+}
+
+.oldTweets .postInfo {
+  text-align: left;
+  margin: 10px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.oldTweets .postInfo span {
+  float: right;
+  visibility: hidden;
+}
+
+.oldTweets:hover .postInfo span {
+  visibility: visible;
+}
+
+.like:hover, .flag:hover, .retweet:hover {
+  background: #53c3a7;
+}
+
+.like:active, .flag:active, .retweet:active {
+  background: 2px solid;
+  background-color: yellow;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 0, 2em;
+  background-color: steelblue;
+  height: 80px;
+  color: #e8fdff;
+}
+
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+}
+
+#nav-bar .header {
+  font-size: 2em;
+  vertical-align: top;
+  line-height: 2.5em;
+}
+
+#nav-bar .toggle {
+  float: right;
+  border: 1px solid blue;
+  border-radius: 3px;
+  background-color: blanchedalmond;
+  color: steelblue;
+  font-weight: bold;
+  height: 60px;
+  margin-top: 8px;
+}
+
+#nav-bar .toggle:hover {
+  background-color: #d6f1ff;
+  color: #00bb7d;
+  border-bottom: 3px solid;
+  border-bottom-color: #00b652;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto+Condensed", 300, 300i, 700, 700i, sans-serif;
+  margin: auto;
+  color: #244751;
+  background-color: #ddf4ff;
+}
+
+main {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: white;
+  padding: 145px;
+  border: 1px solid grey;
+}
+
+footer {
+  text-align: center;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+.container {
+  width: 60%;
+  display: block;
+}
+
+.new-tweet {
+  text-align: left;
+  border-radius: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: lightslategray;
+  background-color: #94dafa;
+  display: none;
+}
+
+.new-tweet h2 {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.new-tweet textarea {
+  color: blue;
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.new-tweet input {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.counter {
+  margin: 5px;
+  float: right;
+  color: #002864;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */

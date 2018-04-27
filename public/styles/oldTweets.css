@@ -24,6 +24,11 @@
     
 }
 
+.oldTweets .postInfo span img {
+    width: 25px;
+    height: 25px;
+}
+
 .oldTweets .userInfo:hover {
     background-color: lightgray;
     color: darkslategrey;
@@ -39,6 +44,7 @@
     margin: 2px 5px;
     height: 45px;
 }
+
 .oldTweets h2 {
     text-align: left;
     padding: 5px;
@@ -57,7 +63,6 @@
 .oldTweets .postInfo span {
     float: right;
     visibility: hidden;
-    /* display: inline-block; */
 }
 
 .oldTweets:hover .postInfo span {
@@ -65,14 +70,30 @@
 }
 
  .like:hover, .flag:hover, .retweet:hover {
-    background: rgb(83, 195, 167);
+    background: #53c3a7;
 }
 
 .like:active, .flag:active, .retweet:active{
     background: 2px solid;
     background-color: yellow;
 }
-.oldTweets .postInfo span img {
-    width: 25px;
-    height: 25px;
+
+.flag:hover, .flag:hover, .retweet:hover {
+    background:  #53c3a7;
 }
+
+.flag:active, .flag:active, .retweet:active{
+    background: 2px solid;
+    background-color: rgb(182, 182, 37);
+}
+
+.retweet:hover, .flag:hover, .retweet:hover {
+    background:  #53c3a7;
+}
+
+.retweet:active, .flag:active, .retweet:active{
+    background: 2px solid;
+    background-color: rgb(107, 107, 11);
+}
+
+

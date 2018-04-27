@@ -176,6 +176,8 @@ footer {
   display: block;
   margin: auto;
   width: 80%;
+  resize: none;
+  margin-bottom: 5px;
 }
 
 .new-tweet input {

@@ -9,7 +9,6 @@ $(document).ready(function() {
 
   function createTweetElement(obj) {
     let likeCount = 0;
-
     let tweetAppend = `<article >
     <div class="userInfo">${obj.user.name}
     <img src= ${obj.user.avatars.regular}>

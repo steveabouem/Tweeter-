@@ -12,6 +12,14 @@
   border-radius: 10px;
 }
 
+.ink {
+  position: absolute;
+  z-index: 2;
+  right: 160px;
+  width: 30px;
+  top: 10%;
+  
+}
 
 .oldTweets .userInfo {
   text-align: justify;
@@ -106,7 +114,8 @@
 }
 
 #nav-bar .toggle {
-  float: right;
+  position: absolute;
+  right: 0;
   border: 1px solid blue;
   border-radius: 3px;
   background-color: blanchedalmond;
@@ -114,6 +123,7 @@
   font-weight: bold;
   height: 60px;
   margin-top: 8px;
+  width: 15%;
 }
 
 #nav-bar .toggle:hover {
@@ -121,6 +131,11 @@
   color: #00bb7d;
   border-bottom: 3px solid;
   border-bottom-color: #00b652;
+  filter: hue-rotate(30%);
+}
+
+#nav-bar .toggle:hover .ink {
+  filter: invert(50%);
 }
 
 html {
@@ -153,8 +168,8 @@ footer {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+* Additional CSS can be defined below or in other CSS files, as per instructions
+*/
 .container {
   width: 60%;
   display: block;

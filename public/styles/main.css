@@ -7,6 +7,12 @@
   background-color: #c8f2ff;
 }
 
+.liked {
+  background-color: #e93232;
+  border-radius: 10px;
+}
+
+
 .oldTweets .userInfo {
   text-align: justify;
   background-color: #00a1b6;

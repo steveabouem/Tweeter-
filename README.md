@@ -20,8 +20,8 @@ Clone the repository, then open the folder *Tweeter-resubmission*. Run the *npm 
 
 ## Screenshots
 
-!["Screenshot of tweeter home page"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/home.png?raw=true)
+!["Screenshot of tweeter home page"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/Home Page.png?raw=true)
 
-!["Screenshot of tweet composing"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/composing.png?raw=true)
+!["Screenshot of tweet composing"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/Composing.png?raw=true)
 
-!["Screenshot of tweet posting"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/posted.png?raw=true)
+!["Screenshot of tweet posting"](https://github.com/steveabouem/Tweeter-resubmission/blob/master/docs/Tweet composed.png?raw=true)

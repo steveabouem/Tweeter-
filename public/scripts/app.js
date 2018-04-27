@@ -7,6 +7,10 @@ $(document).ready(function() {
     $("textarea").select();
   });
 
+  $("body").on("click", ".like", function() {
+    $(this).toggleClass("liked");
+  });
+
   function createTweetElement(obj) {
     let likeCount = 0;
     let tweetAppend = `<article >
@@ -14,22 +18,15 @@ $(document).ready(function() {
     <img src= ${obj.user.avatars.regular}>
     <span>${obj.user.handle}</span>
     </div>
-    <h2>${obj.content.text}</h2>     
+    <h2 style="overflow-wrap:break-word">${obj.content.text}</h2>     
     <div class="postInfo"> created on ${obj.formatDate}.
     <span>
     <img class="flag" src="/images/flag.png">
-    <img class="${obj.user.name}" src="/images/heart.png"> ${obj.likes}
+    <img class="like" src="/images/heart.png">
     <img class="retweet" src="/images/retweet.png"> 
     </span>
     </div>
     </section>`;
-
-    $(".postInfo").on("click", "img", function(event) {
-      let imageClass = event.currentTarget.className;
-      imageClass = obj.user.name;
-      console.log("user: ", event);
-      obj.likes++;
-    });
 
     return tweetAppend;
   } //createTweetElement function
@@ -51,6 +48,7 @@ $(document).ready(function() {
 
   function loadTweets() {
     $.get("/tweets", function(tweetJSON) {
+      let id = "";
       renderTweets(tweetJSON);
     });
     $("textarea").val(""); //resets textarea upon new tweet submission.
@@ -59,7 +57,6 @@ $(document).ready(function() {
   function validation(event) {
     let charCount = "";
     let newTweet = $("textarea").serialize();
-    console.log(newTweet);
 
     if (newTweet === "text=") {
       alert("no input");
